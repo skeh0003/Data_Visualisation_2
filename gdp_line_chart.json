@@ -1,0 +1,12 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Change in GDP Per Capita" },
+    "data": {
+    "url": "./Yearly GDP Change.csv"
+    },
+    "mark": "line",
+    "encoding": {
+    "x": { "field": "Year", "type": "ordinal" },
+    "y": { "field": "Change in GDP Per Capita", "type": "quantitative" }
+    }
+    }

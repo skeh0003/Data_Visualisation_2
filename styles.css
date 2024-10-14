@@ -27,6 +27,10 @@ body {
     height: 400px;
 }
 
+.section-divider {
+    text-align: center;
+}
+
 #d1 {
     padding-right: 0px;
     padding-left: 0px;

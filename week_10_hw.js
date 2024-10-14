@@ -7,3 +7,13 @@ var vg_2 = "./week_10_homework.json";
 vegaEmbed("#ausmap", vg_2).then(function(result) {
 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
+
+var vg_state_industries = "./industry_bar_chart.json";
+vegaEmbed("#industrybar", vg_state_industries).then(function(result) {
+// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+var vg_gdp_change = "./gdp_line_chart.json";
+vegaEmbed("#gdpline", vg_gdp_change).then(function(result) {
+// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);

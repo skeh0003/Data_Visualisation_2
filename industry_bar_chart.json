@@ -1,0 +1,12 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Victorian Industries" },
+    "data": {
+    "url": "./State_Industries.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+    "x": { "field": "Victoria", "type": "quantitative" },
+    "y": { "field": "Industry", "type": "nominal" }
+    }
+    }
