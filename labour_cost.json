@@ -1,14 +1,12 @@
 
 
-
-
     {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
         "width": 300,
         "height": 300,
-        "title": "Change in GDP Per Capita",
+        "title": "Change in Unit Labour Cost",
         "data": {
-            "url": "./Yearly GDP change.csv",
+            "url": "./unit_labour_cost.csv",
             "format": {"type": "csv"}
         },
         "layer": [
@@ -27,13 +25,13 @@
                 }
                 },
                 "y": {
-                "field": "Change in GDP Per Capita",
+                "field": "cost",
                 "type": "quantitative",
-                "axis": {"title": "Change in GDP per Capita (%)"}
+                "axis": {"title": "Change in Unit Labour Cost (%)"}
                 },
                 "tooltip": [
                 {"field": "Year", "type": "ordinal", "title": "Year"},
-                {"field": "Change in GDP Per Capita", "type": "quantitative", "title": "Change in GDP Per Capita (%)"}
+                {"field": "cost", "type": "quantitative", "title": "Change in Unit Labour Cost (%)"}
                 ]
             }
             },
@@ -41,16 +39,16 @@
                 "mark": {
                   "type": "text",
                   "align": "left",
-                  "dx": -200,
-                  "dy": 0,
+                  "dx": -190,
+                  "dy": -10,
                   "fontSize": 12,
                   "font": "Arial",
                   "fontWeight": "lighter"
                 },
                 "encoding": {
-                  "x": {"datum": "2020", "type": "ordinal"},
-                  "y": {"datum": 0.2, "type": "quantitative"}, 
-                  "text": {"value": "Lowest Change GDP (COVID-19)"}
+                  "x": {"datum": "2021", "type": "ordinal"},
+                  "y": {"datum": 2.5, "type": "quantitative"}, 
+                  "text": {"value": "Peak Change in Unit Labour Cost"}
                 }
               }
         ],

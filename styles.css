@@ -1,42 +1,91 @@
 .page {
-    width: 900px;
-    background-color: aliceblue;
-    padding: 50px;
+    width: 1100px;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
     margin: auto;
 }
 
 body {
-    background-color: lightgrey;
+    background-color: rgb(193, 216, 237);
 }
 
-.pure-g {
-    height: 400;
-    padding-top: 30px;
+#title {
+    padding-bottom: 20px;
+    text-align: center;
 }
 
-.vis-container-1 {
-    width: 680px;
-    height: 400px;
-    padding-left: 60px;
-    padding-right: 0px;
-    padding-top: 20px;
-}
-
-.vis-container-2 {
-    width: 600px;
-    height: 400px;
+hr {
+    border-top: 1px solid rgb(193, 216, 237);
 }
 
 .section-divider {
     text-align: center;
+    padding-top: 0px;
 }
 
-#d1 {
-    padding-right: 0px;
-    padding-left: 0px;
+.pure-g {
+    height: 400;
+    padding-top: 20px;
 }
 
-#d2 {
-    padding-left: 0px;
+#countrygdp {
+    width: 600px;
+    height: 400px;
+}
+
+#worldmap {
+    width: auto;
+    height: auto;
+}
+
+#industry-desc {
+    padding-left: 40px;
     padding-right: 0px;
+}
+
+#ausmap {
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
+.hover-text {
+    color: lightslategray;
+}
+
+#hover-1 {
+    text-align: right;
+    padding-right: 20px;
+}
+
+#hover-2 {
+    text-align: right;
+}
+
+#hover-3 {
+    text-align: center;
+}
+
+.bold-text {
+    font: bold;
+}
+
+#title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.credits {
+    font-size: x-small;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#g-1 {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+#g-2 {
+    padding-bottom: 20px;
 }

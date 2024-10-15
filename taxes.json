@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "title": "Australian Total Tax",
+    "data": {
+        "url": "./taxes.csv",
+        "format": {"type": "csv"}
+    },
+    "layer": [
+        {
+        "mark": {
+            "type": "line",
+            "point": {"size": 75, "filled": true}
+        },
+        "encoding": {
+            "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "axis": {
+                "title": "Year",
+                "labelAngle": 45
+            }
+            },
+            "y": {
+            "field": "Tax",
+            "type": "quantitative",
+            "axis": {"title": "Total Tax ($ Millions)"}
+            },
+            "tooltip": [
+            {"field": "Year", "type": "ordinal", "title": "Year"},
+            {"field": "Tax", "type": "quantitative", "title": "Total Tax ($ Millions)"}
+            ]
+        }
+        }
+    ],
+    "config": {
+        "line": {
+        "strokeWidth": 2
+
+    }
+    }
+}

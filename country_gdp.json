@@ -1,0 +1,76 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 560,
+    "height": 300,
+    "title": "GDP Per Capita",
+    "data": {
+      "url": "gdp_per_capita_long.csv",
+      "format": {"type": "csv"}
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "point": {"size": 75, "filled": true}
+        },
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "axis": {
+              "title": "Year",
+              "labelAngle": 45
+            }
+          },
+          "y": {
+            "field": "GDP",
+            "type": "quantitative",
+            "axis": {"title": "GDP Per Capita (USD)"},
+            "scale": {"domain": [0, 70000]}
+          },
+          "color": {
+            "field": "Country",
+            "type": "nominal",
+            "legend": {"title": "Country"}
+          },
+          "opacity": {
+            "condition": {
+              "test": "datum.Country === 'Australia'",
+              "value": 1
+            },
+            "value": 0.2
+          },
+          "tooltip": [
+            {"field": "Year", "type": "ordinal", "title": "Year"},
+            {"field": "Country", "type": "nominal", "title": "Country"},
+            {"field": "GDP", "type": "quantitative", "title": "GDP Per Capita"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": -220,
+          "dy": 0,
+          "fontSize": 14,
+          "font": "Arial",
+          "fontWeight": "lighter"
+        },
+        "encoding": {
+          "x": {"datum": "2013", "type": "ordinal"},
+          "y": {"datum": 67600, "type": "quantitative"}, 
+          "text": {"value": "Australian Peak (2012-2013)"}
+        }
+      }
+    ],
+    "config": {
+      "line": {
+        "strokeWidth": 2
+      },
+      "axis": {
+        "grid": true
+      }
+    }
+  }
+  

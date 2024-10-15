@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Australian Retail Turnover",
-    "width": "container",
-    "height": "container",
+    "width": 480,
+    "height": 480,
     "params": [
         {
             "name": "Year_selection",
@@ -25,6 +25,13 @@
         "scale": 500
     },
     "layer": [
+        {
+            "data": {
+              "url": "./oceans.topojson",
+              "format": {"type": "topojson","feature": "oceans"}
+            },
+            "mark": {"type": "geoshape", "fill":"aliceblue"}
+          },
         {
             "data": {
               "url": "./ne_50m.json",
@@ -77,7 +84,13 @@
                     
                     "field": "Percentage Change from Previous Year",
                     "type": "quantitative",
-                    "title": "Change from previous year (%)"
+                    "title": "Change from previous year (%)",
+                    
+                    "legend": {
+                        "orient": "bottom",
+                        "direction": "horizontal",
+                        "offset": -50
+                    }
                 },
                 "tooltip": [
                     {
