@@ -1,63 +1,59 @@
-
-
-
-
-    {
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "width": 300,
-        "height": 300,
-        "title": "Change in GDP Per Capita",
-        "data": {
-            "url": "./Yearly GDP change.csv",
-            "format": {"type": "csv"}
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "title": "Change in GDP Per Capita",
+    "data": {
+        "url": "./Yearly GDP change.csv",
+        "format": {"type": "csv"}
+    },
+    "layer": [
+        {
+        "mark": {
+            "type": "line",
+            "point": {"size": 75, "filled": true}
         },
-        "layer": [
-            {
-            "mark": {
-                "type": "line",
-                "point": {"size": 75, "filled": true}
-            },
-            "encoding": {
-                "x": {
-                "field": "Year",
-                "type": "ordinal",
-                "axis": {
-                    "title": "Year",
-                    "labelAngle": 45
-                }
-                },
-                "y": {
-                "field": "Change in GDP Per Capita",
-                "type": "quantitative",
-                "axis": {"title": "Change in GDP per Capita (%)"}
-                },
-                "tooltip": [
-                {"field": "Year", "type": "ordinal", "title": "Year"},
-                {"field": "Change in GDP Per Capita", "type": "quantitative", "title": "Change in GDP Per Capita (%)"}
-                ]
+        "encoding": {
+            "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "axis": {
+                "title": "Year",
+                "labelAngle": 45
             }
             },
-            {
-                "mark": {
-                  "type": "text",
-                  "align": "left",
-                  "dx": -200,
-                  "dy": 0,
-                  "fontSize": 12,
-                  "font": "Arial",
-                  "fontWeight": "lighter"
-                },
-                "encoding": {
-                  "x": {"datum": "2020", "type": "ordinal"},
-                  "y": {"datum": 0.2, "type": "quantitative"}, 
-                  "text": {"value": "Lowest Change GDP (COVID-19)"}
-                }
-              }
-        ],
-        "config": {
-            "line": {
-            "strokeWidth": 2
-    
+            "y": {
+            "field": "Change in GDP Per Capita",
+            "type": "quantitative",
+            "axis": {"title": "Change in GDP per Capita (%)"}
+            },
+            "tooltip": [
+            {"field": "Year", "type": "ordinal", "title": "Year"},
+            {"field": "Change in GDP Per Capita", "type": "quantitative", "title": "Change in GDP Per Capita (%)"}
+            ]
         }
-        }
+        },
+        {
+            "mark": {
+              "type": "text",
+              "align": "left",
+              "dx": -200,
+              "dy": 0,
+              "fontSize": 12,
+              "font": "Arial",
+              "fontWeight": "lighter"
+            },
+            "encoding": {
+              "x": {"datum": "2020", "type": "ordinal"},
+              "y": {"datum": 0.2, "type": "quantitative"}, 
+              "text": {"value": "Lowest Change GDP (COVID-19)"}
+            }
+          }
+    ],
+    "config": {
+        "line": {
+        "strokeWidth": 2
+
     }
+    }
+}
